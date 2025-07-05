@@ -6,7 +6,14 @@ const routes = [
     path: "/chu",
     component: () => import("../components/admin/trangchu.vue"),
    },
-   
+   {
+    path: "/thongke",
+    component: () => import("../components/thongke/index.vue"),
+   },
+   {
+    path: "/ngansach",
+    component: () => import("../components/ngansach/index.vue"),
+   },
 
     
 ]

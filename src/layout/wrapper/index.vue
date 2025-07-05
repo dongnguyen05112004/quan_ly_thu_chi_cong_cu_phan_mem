@@ -446,8 +446,20 @@
                                 <div class="menu-title">Trang Chu</div>
                             </a>
                         </li>
-
-                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="/thongke">
+                                <div class="parent-icon"><i class='bx bx-cookie'></i>
+                                </div>
+                                <div class="menu-title">Thống Kê</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/ngansach">
+                                <div class="parent-icon"><i class='bx bx-cookie'></i>
+                                </div>
+                                <div class="menu-title">Ngân Sách</div>
+                            </a>
+                        </li>
                         
                     </ul>
                 </nav>
