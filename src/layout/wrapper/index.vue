@@ -32,7 +32,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="/home">
+                                        <a class="nav-link" href="/thongke">
                                             <div class="menu-title"><h6>Thông kê</h6></div>
                                         </a>
                                     </li>

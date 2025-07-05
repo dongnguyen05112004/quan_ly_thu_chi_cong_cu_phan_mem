@@ -25,7 +25,11 @@ const routes = [
     component: () => import("../components/Khach_Hang/dang_ky.vue"),
     meta : { layout: "blank" },
    },
-
+    {
+    path: "/thongke",
+    component: () => import("../components/thongke/index.vue"),
+    
+   },
     
 ]
 
