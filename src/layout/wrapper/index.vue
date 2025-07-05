@@ -27,11 +27,6 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="/home">
-                                            <div class="menu-title"><h6>Chi tiêu</h6></div>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
                                         <a class="nav-link" href="/thongke">
                                             <div class="menu-title"><h6>Thông kê</h6></div>
                                         </a>
@@ -46,6 +41,12 @@
                                             <div class="menu-title"><h6>Thông tin cá nhân</h6></div>
                                         </a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/no">
+                                            <div class="menu-title"><h6>Quản lý nợ</h6></div>
+                                        </a>
+                                    </li>
+                                    
                                 </ul>
                             </nav>
                         </div>
@@ -68,6 +69,7 @@
         <!--end header wrapper-->
         <!--start page wrapper -->
         <div class="page-wrapper" style="background-color: #fff; min-height: 100vh;">
+
             <div class="page-content">
                 <router-view></router-view>
             </div>
