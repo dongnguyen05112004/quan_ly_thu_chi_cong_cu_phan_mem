@@ -5,7 +5,7 @@
                 <div class="col-lg-3">
                     <div class="card ">
                         <div class="card-body text-center">
-                            <img src="https://i.pinimg.com/736x/5c/a9/a1/5ca9a1914cabe6a26602d0d4a9b68ab7.jpg"
+                            <img src="https://i.pinimg.com/736x/a6/16/28/a6162845747ab6f081706e9a00552a13.jpg"
                                 style="border-radius: 50%; width:100px ; height: 100px;" alt="user avatar">
                             <h5 class="mt-3">Đông</h5>
                             <span class="text-start">

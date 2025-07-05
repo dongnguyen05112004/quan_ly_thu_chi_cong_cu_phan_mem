@@ -10,7 +10,17 @@ const routes = [
     path: "/profile",
     component: () => import("../components/Khach_Hang/profile.vue"),
    },
-   
+   {
+    path: "/dang-nhap",
+    component: () => import("../components/Khach_Hang/dang_nhap.vue"),
+    meta : { layout: "blank" },
+   },
+   {
+    path: "/dang-ky",
+    component: () => import("../components/Khach_Hang/dang_ky.vue"),
+    meta : { layout: "blank" },
+   },
+  
 
     
 ]
