@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from "vue-router"; // cài vue-router:
 const routes = [
     
    {
-    path: "/chu",
+    path: "/home",
     component: () => import("../components/admin/trangchu.vue"),
    },
    {

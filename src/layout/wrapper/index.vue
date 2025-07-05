@@ -12,22 +12,22 @@
                                 <ul class="navbar-nav justify-content-start flex-grow-1 gap-1">
 
                                     <li class="nav-item">
-                                        <a class="nav-link" href="/chu">
+                                        <a class="nav-link" href="/home">
                                             <div class="menu-title"><h6>Trang Chủ</h6></div>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="/chu">
+                                        <a class="nav-link" href="/home">
                                             <div class="menu-title"><h6>Thu nhập</h6></div>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="/chu">
+                                        <a class="nav-link" href="/home">
                                             <div class="menu-title"><h6>Chi tiêu</h6></div>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="/chu">
+                                        <a class="nav-link" href="/home">
                                             <div class="menu-title"><h6>Chi tiêu</h6></div>
                                         </a>
                                     </li>
