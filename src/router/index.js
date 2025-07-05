@@ -10,8 +10,11 @@ const routes = [
     path: "/profile",
     component: () => import("../components/Khach_Hang/profile.vue"),
    },
-   
       {
+    path: "/no",
+    component: () => import("../components/quanlyno/quanlyno.vue"),
+   },
+         {
     path: "/thunhap",
     component: () => import("../components/thunhap/thunhap.vue"),
    },
