@@ -37,7 +37,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="/home">
+                                        <a class="nav-link" href="/ngansach">
                                             <div class="menu-title"><h6>Ngân sách</h6></div>
                                         </a>
                                     </li>

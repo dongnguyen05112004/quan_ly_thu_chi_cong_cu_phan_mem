@@ -15,6 +15,10 @@ const routes = [
     path: "/thunhap",
     component: () => import("../components/thunhap/thunhap.vue"),
    },
+   {
+    path: "/ngansach",
+    component: () => import("../components/ngan_sach/ngan_sach.vue"),
+   },
       {
     path: "/dang-nhap",
     component: () => import("../components/Khach_Hang/dang_nhap.vue"),
