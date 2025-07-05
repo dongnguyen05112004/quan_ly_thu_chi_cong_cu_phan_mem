@@ -17,7 +17,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="/home">
+                                        <a class="nav-link" href="/thunhap">
                                             <div class="menu-title"><h6>Thu nhập</h6></div>
                                         </a>
                                     </li>
@@ -67,7 +67,7 @@
         </div>
         <!--end header wrapper-->
         <!--start page wrapper -->
-        <div class="page-wrapper"  >
+        <div class="page-wrapper" style="background-color: #fff; min-height: 100vh;">
             <div class="page-content">
                 <router-view></router-view>
             </div>

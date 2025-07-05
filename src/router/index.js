@@ -6,11 +6,16 @@ const routes = [
     path: "/home",
     component: () => import("../components/admin/trangchu.vue"),
    },
-   {
+      {
     path: "/profile",
     component: () => import("../components/Khach_Hang/profile.vue"),
    },
-   {
+   
+      {
+    path: "/thunhap",
+    component: () => import("../components/thunhap/thunhap.vue"),
+   },
+      {
     path: "/dang-nhap",
     component: () => import("../components/Khach_Hang/dang_nhap.vue"),
     meta : { layout: "blank" },
@@ -20,7 +25,6 @@ const routes = [
     component: () => import("../components/Khach_Hang/dang_ky.vue"),
     meta : { layout: "blank" },
    },
-  
 
     
 ]
