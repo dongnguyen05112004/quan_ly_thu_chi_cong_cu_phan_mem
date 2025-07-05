@@ -8,11 +8,11 @@ import Toaster from "@meforma/vue-toaster";
 const app = createApp(App)
 
 app.use(router)
-app.component("default-layout", Default);
-app.component("blank-layout", blank);
 app.use(Toaster, { 
     position: 'top-right', 
     max: 5 
 });
 
-app.mount("#app")
+app.mount("#app");
+app.component("default-layout", Default);
+app.component("blank-layout", blank);

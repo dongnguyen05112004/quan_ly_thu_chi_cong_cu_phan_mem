@@ -1,10 +1,10 @@
 <template>
-    <div class="wrapper">
+    <div class="wrapper" >
         <!--start header wrapper-->
-        <div class="header-wrapper">
+        <div class="header-wrapper" >
             <!--start header -->
             <header>
-                <div class="topbar d-flex align-items-center">
+                <div class="topbar d-flex align-items-center"  >
                     <nav class="navbar navbar-expand">
 
                         <div class="top-menu ms-auto">
@@ -67,19 +67,19 @@
         </div>
         <!--end header wrapper-->
         <!--start page wrapper -->
-        <div class="page-wrapper">
+        <div class="page-wrapper"  >
             <div class="page-content">
                 <router-view></router-view>
             </div>
         </div>
         <!--end page wrapper -->
         <!--start overlay-->
-        <div class="overlay toggle-icon"></div>
+        <div class="overlay toggle-icon" ></div>
         <!--end overlay-->
         <!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i
                 class='bx bxs-up-arrow-alt'></i></a>
         <!--End Back To Top Button-->
-        <footer class="page-footer">
+        <footer class="page-footer"  >
             <p class="mb-0">Copyright © 2021. All right reserved.</p>
         </footer>
     </div>
