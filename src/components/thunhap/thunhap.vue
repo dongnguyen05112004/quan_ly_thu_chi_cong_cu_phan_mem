@@ -22,7 +22,7 @@
                             </button>
                             <div class="dropdown-menu dropdown-menu-custom">
                                 <button>Chỉnh sửa thu thu nhập</button>
-                                <button class="text-danger">Xóa thu nhập</button>
+                                <button >Xóa thu nhập</button>
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                             </button>
                             <div class="dropdown-menu dropdown-menu-custom">
                                 <button>Chỉnh sửa thu thu nhập</button>
-                                <button class="text-danger">Xóa thu nhập</button>
+                                <button >Xóa thu nhập</button>
                             </div>
                         </div>
                     </div>
@@ -74,7 +74,7 @@
                 <h5><strong>Thêm thu nhập</strong></h5>
 
                 <a href="#" class="text-primary">Thêm thu nhập tự động</a>
-                <div class="card-custom mt-2">
+                <div class="card-custom mt-2 background-color">
                     <form>
                         <div class="mb-2">
                             <label for="soTien" class="form-label">Số tiền</label>
@@ -125,6 +125,10 @@ body {
     margin-bottom: 15px;
 }
 
+.background-color { 
+        background-color: #dde8f5;
+}
+
 .text-small {
     font-size: 0.9rem;
 }
@@ -137,7 +141,8 @@ body {
 .dropdown-menu-custom {
     background-color: white;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    box-shadow: 0 0 5px 1px #7FB3FF ;
+    border-radius: 10px;
     min-width: 180px;
     padding: 8px;
 }

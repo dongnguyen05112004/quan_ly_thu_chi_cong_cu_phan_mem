@@ -68,7 +68,7 @@
         </div>
         <!--end header wrapper-->
         <!--start page wrapper -->
-        <div class="page-wrapper" style="background-color: #fff; min-height: 100vh;">
+        <div class="page-wrapper" style="background-color: #fff; min-height: 100vh; margin-top: 60px;">
 
             <div class="page-content">
                 <router-view></router-view>
