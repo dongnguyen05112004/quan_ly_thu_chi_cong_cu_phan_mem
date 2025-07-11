@@ -1,16 +1,16 @@
-<template>
+<template >
     <div class="row">
         <div class="col-6">
             <h5>Nợ cá nhân</h5>
             <div class="card" style="background-color: #DDE8F5; border-radius: 20px;">
                 <div class="card-body">
-                    <template v-for="(v, index) in l_no" :key="index">
+                    <template v-for="(v, index) in l_tietkiem" :key="index">
                         <div class="card" style="border-radius: 20px;">
                             <div class="card-body">
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <td><b>{{ v.ten_no }}</b>: {{ v.so_tien }}</td>
+                                            <td><b>Tên tiết kiệm</b>: có đâu mà tiết ???</td>
                                             <td><b>Ngày bắt đầu:</b> {{ v.ngay_bat_dau }}</td>
                                         </tr>
                                     </thead>
@@ -30,15 +30,15 @@
                                     <li>
                                         <button class="btn ms-2"
                                             style="background-color: #DDE8F5; border-radius: 15px; width: 90%;"
-                                            v-on:click="Object.assign(sua_no, v)" data-bs-toggle="modal"
+                                            v-on:click="Object.assign(sua_tietkiem, v)" data-bs-toggle="modal"
                                             data-bs-target="#updateModal">Sửa khoản
-                                            nợ</button>
+                                            tiết kiệm</button>
                                     </li>
                                     <li>
-                                        <button class="btn ms-2 mt-2" v-on:click="Object.assign(xoa_no, v)"
+                                        <button class="btn ms-2 mt-2" v-on:click="Object.assign(xoa_tietkiem, v)"
                                             data-bs-toggle="modal" data-bs-target="#delModal"
                                             style="background-color: #DDE8F5; border-radius: 15px; width: 90%;">Xóa
-                                            khoản nợ</button>
+                                            khoản tiết kiệm</button>
                                     </li>
                                 </ul>
                             </div>
@@ -52,33 +52,33 @@
             <div class="card" style="background-color: #DDE8F5; border-radius: 20px;">
                 <div class="card-body">
                     <div class="mb-3">
-                        <label for="maNo" class="form-label">Mã nợ</label>
-                        <input v-model="them_no.ma_no" type="text" class="form-control" id="maNo"
+                        <label for="maNo" class="form-label">Mã tiết kiệm</label>
+                        <input v-model="them_tietkiem.ma_tiet_kiem" type="text" class="form-control" id="maNo"
                             placeholder="Nhập mã nợ">
                     </div>
                     <div class="mb-3">
-                        <label for="noId" class="form-label">Tên nợ</label>
-                        <input v-model="them_no.ten_no" type="text" class="form-control" id="noId"
+                        <label for="noId" class="form-label">Mã tài khoản</label>
+                        <input v-model="them_tietkiem.ma_tai_khoan" type="text" class="form-control" id="noId"
                             placeholder="Nhập tên nợ">
                     </div>
                     <div class="mb-3">
-                        <label for="noName" class="form-label">Số tiền</label>
-                        <input v-model="them_no.so_tien" type="number" class="form-control" id="noName" placeholder="">
+                        <label for="noName" class="form-label">Mã thành viên gia đình</label>
+                        <input v-model="them_tietkiem.ma_tvgd" type="text" class="form-control" id="noName" placeholder="">
                     </div>
                     <div class="mb-3">
                         <label for="startDate" class="form-label">Ngày bắt đầu</label>
-                        <input v-model="them_no.ngay_bat_dau" type="date" class="form-control" id="startDate">
+                        <input v-model="them_tietkiem.ngay_bat_dau" type="date" class="form-control" id="startDate">
                     </div>
                     <div class="mb-3">
                         <label for="endDate" class="form-label">Ngày kết thúc</label>
-                        <input v-model="them_no.ngay_ket_thuc" type="date" class="form-control" id="endDate">
+                        <input v-model="them_tietkiem.ngay_ket_thuc" type="date" class="form-control" id="endDate">
                     </div>
                     <div class="mb-3">
                         <label for="interestRate" class="form-label">Lãi suất (%)</label>
-                        <input v-model="them_no.lai_suat" type="number" class="form-control" id="interestRate"
+                        <input v-model="them_tietkiem.lai_suat" type="number" class="form-control" id="interestRate"
                             placeholder="Nhập lãi suất">
                     </div>
-                    <div class="text-end"><button class="btn btn-primary" v-on:click="themNo()">Thêm</button></div>
+                    <div class="text-end"><button class="btn btn-primary" v-on:click="themTietkiem()">Thêm</button></div>
                 </div>
             </div>
         </div>
@@ -87,15 +87,15 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel"> Xóa khoản nợ {{ xoa_no.ten_no }}</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"> Xóa khoản tiết kiệm </h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Bạn có chắc muốn xóa khoản nợ này không?</p>
+                    <p>Bạn có chắc muốn xóa khoản tiết kiệm này không?</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button v-on:click="xoaNo()" type="button" data-bs-dismiss="modal" class="btn btn-danger">Xac
+                    <button v-on:click="xoaTietkiem()" type="button" data-bs-dismiss="modal" class="btn btn-danger">Xac
                         nhan</button>
                 </div>
             </div>
@@ -105,42 +105,42 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel"> Sửa khoản nợ {{ sua_no.ten_no }}</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"> Sửa khoản tiết kiệm </h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
 
                     <div class="mb-3">
-                        <label for="maNo" class="form-label">Mã nợ</label>
-                        <input v-model="sua_no.ma_no" type="text" class="form-control" id="maNo"
+                        <label for="maNo" class="form-label">Mã tiết kiệm </label>
+                        <input v-model="sua_tietkiem.ma_tiet_kiem" type="text" class="form-control" id="maNo"
                             placeholder="Nhập mã nợ">
                     </div>
                     <div class="mb-3">
-                        <label for="noId" class="form-label">Tên nợ</label>
-                        <input v-model="sua_no.ten_no" type="text" class="form-control" id="noId"
+                        <label for="noId" class="form-label">Mã tài khoản</label>
+                        <input v-model="sua_tietkiem.ma_tai_khoan" type="text" class="form-control" id="noId"
                             placeholder="Nhập tên nợ">
                     </div>
                     <div class="mb-3">
-                        <label for="noName" class="form-label">Số tiền</label>
-                        <input v-model="sua_no.so_tien" type="number" class="form-control" id="noName" placeholder="">
+                        <label for="noName" class="form-label">Mã thành viên gia đình</label>
+                        <input v-model="sua_tietkiem.ma_tvgd" type="text" class="form-control" id="noName" placeholder="">
                     </div>
                     <div class="mb-3">
                         <label for="startDate" class="form-label">Ngày bắt đầu</label>
-                        <input v-model="sua_no.ngay_bat_dau" type="date" class="form-control" id="startDate">
+                        <input v-model="sua_tietkiem.ngay_bat_dau" type="date" class="form-control" id="startDate">
                     </div>
                     <div class="mb-3">
                         <label for="endDate" class="form-label">Ngày kết thúc</label>
-                        <input v-model="sua_no.ngay_ket_thuc" type="date" class="form-control" id="endDate">
+                        <input v-model="sua_tietkiem.ngay_ket_thuc" type="date" class="form-control" id="endDate">
                     </div>
                     <div class="mb-3">
                         <label for="interestRate" class="form-label">Lãi suất (%)</label>
-                        <input v-model="sua_no.lai_suat" type="number" class="form-control" id="interestRate"
+                        <input v-model="sua_tietkiem.lai_suat" type="number" class="form-control" id="interestRate"
                             placeholder="Nhập lãi suất">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button v-on:click="suaNo()" type="button" data-bs-dismiss="modal" class="btn btn-danger">Xac
+                    <button v-on:click="suaTietkiem()" type="button" data-bs-dismiss="modal" class="btn btn-danger">Xac
                         nhan</button>
                 </div>
             </div>
@@ -148,33 +148,32 @@
     </div>
 </template>
 <script>
-import axios from 'axios';
-
+import axios from "axios";
 export default {
     data() {
         return {
-            l_no: [],
-            them_no: { ma_no: '', ten_no: '', ngay_bat_dau: '', ngay_ket_thuc: '', so_tien: '', lai_suat: '' },
-            xoa_no: { ma_no: '', ten_no: '', ngay_bat_dau: '', ngay_ket_thuc: '', so_tien: '', lai_suat: '' },
-            sua_no: { ma_no: '', ten_no: '', ngay_bat_dau: '', ngay_ket_thuc: '', so_tien: '', lai_suat: '' }
+            l_tietkiem: [],
+            them_tietkiem: { ma_tiet_kiem: '',ma_tai_khoan: '',ma_tvgd: '',ngay_bat_dau: '',ngay_ket_thuc: '',lai_suat: '' },
+            xoa_tietkiem: { ma_tiet_kiem: '',ma_tai_khoan: '',ma_tvgd: '',ngay_bat_dau: '',ngay_ket_thuc: '',lai_suat: '' },
+            sua_tietkiem: { ma_tiet_kiem: '',ma_tai_khoan: '',ma_tvgd: '',ngay_bat_dau: '',ngay_ket_thuc: '',lai_suat: '' }
         }
     },
     methods: {
-        getNo() {
-            axios.get('http://127.0.0.1:8000/api/canhan/no/data')
+        getTietkiem() {
+            axios.get('http://127.0.0.1:8000/api/canhan/tietkiem/data')
                 .then(response => {
-                    this.l_no = response.data.data;
+                    this.l_tietkiem = response.data.data;
                 })
                 .catch(err => {
                     console.log(err);
                 })
         },
-        themNo() {
+        themTietkiem() {
             axios
-                .post('http://127.0.0.1:8000/api/canhan/no/them', this.them_no)
+                .post('http://127.0.0.1:8000/api/canhan/tietkiem/them', this.them_tietkiem)
                 .then(response => {
                     if (response.data.status == true) {
-                        this.getNo();
+                        this.getTietkiem();
                         this.$toast.success(response.data.message);
                     } else {
                         this.$toast.error('Them moi that bai');
@@ -193,12 +192,12 @@ export default {
                 });
         },
 
-        xoaNo() {
+        xoaTietkiem() {
             axios
-                .post('http://127.0.0.1:8000/api/canhan/no/xoa', this.xoa_no)
+                .post('http://127.0.0.1:8000/api/canhan/tietkiem/xoa', this.xoa_tietkiem)
                 .then(response => {
                     if (response.data.status == true) {
-                        this.getNo();
+                        this.getTietkiem();
                         this.$toast.success(response.data.message);
                     } else {
                         this.$toast.error('Xoa that bai');
@@ -217,14 +216,14 @@ export default {
                 });
         },
 
-        suaNo() {
+        suaTietkiem() {
             axios
-                .post('http://127.0.0.1:8000/api/canhan/no/sua', this.sua_no)
+                .post('http://127.0.0.1:8000/api/canhan/tietkiem/sua', this.sua_tietkiem)
                 .then(response => {
                     // console.log(response.data.status);
                     // console.log(response.data.message);
                     if (response.data.status == true) {
-                        this.getNo();
+                        this.getTietkiem();
                         this.$toast.success(response.data.message);
                     } else {
                         this.$toast.error('Sua moi that bai');
@@ -245,8 +244,10 @@ export default {
     },
 
     mounted() {
-        this.getNo();
+        this.getTietkiem();
     }
 }
 </script>
-<style></style>
+<style >
+    
+</style>

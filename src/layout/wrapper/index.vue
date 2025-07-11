@@ -1,66 +1,85 @@
 <template>
-    <div class="wrapper" >
+    <div class="wrapper">
         <!--start header wrapper-->
-        <div class="header-wrapper" >
+        <div class="header-wrapper">
             <!--start header -->
             <header>
-                <div class="topbar d-flex align-items-center"  >
+                <div class="topbar d-flex align-items-center" style="background-color: #DDE8F5;">
                     <nav class="navbar navbar-expand">
 
                         <div class="top-menu ms-auto">
                             <nav class="navbar navbar-expand-xl w-100">
                                 <ul class="navbar-nav justify-content-start flex-grow-1 gap-1">
 
-                                    <li class="nav-item">
+                                    <li class="nav-item mt-2">
                                         <a class="nav-link" href="/home">
-                                            <div class="menu-title"><h6>Trang Chủ</h6></div>
+                                            <div class="menu-title">
+                                                <h6>Trang Chủ</h6>
+                                            </div>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
+                                    <li class="nav-item mt-2">
                                         <a class="nav-link" href="/thunhap">
-                                            <div class="menu-title"><h6>Thu nhập</h6></div>
+                                            <div class="menu-title">
+                                                <h6>Thu nhập</h6>
+                                            </div>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="/">
-                                            <div class="menu-title"><h6>Chi tiêu</h6></div>
+                                    <li class="nav-item mt-2">
+                                        <a class="nav-link" href="/chitieu">
+                                            <div class="menu-title">
+                                                <h6>Chi tiêu</h6>
+                                            </div>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
+                                    <li class="nav-item mt-2">
                                         <a class="nav-link" href="/thongke">
-                                            <div class="menu-title"><h6>Thông kê</h6></div>
+                                            <div class="menu-title">
+                                                <h6>Thông kê</h6>
+                                            </div>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
+                                    <li class="nav-item mt-2">
                                         <a class="nav-link" href="/ngansach">
-                                            <div class="menu-title"><h6>Ngân sách</h6></div>
+                                            <div class="menu-title">
+                                                <h6>Ngân sách</h6>
+                                            </div>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="/profile">
-                                            <div class="menu-title"><h6>Thông tin cá nhân</h6></div>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
+
+                                    <li class="nav-item mt-2">
                                         <a class="nav-link" href="/no">
-                                            <div class="menu-title"><h6>Quản lý nợ</h6></div>
+                                            <div class="menu-title">
+                                                <h6>Quản lý nợ</h6>
+                                            </div>
                                         </a>
                                     </li>
-                                    
+                                    <li class="nav-item mt-2">
+                                        <a class="nav-link" href="/tietkiem">
+                                            <div class="menu-title">
+                                                <h6>Quản lý tiết kiệm</h6>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <div class="user-box dropdown">
+                                        <div class="d-flex align-items-center">
+                                            <img src="../../assets/images/avatars/avatar-1.png" class="rounded-circle"
+                                                width="50" alt="">
+                                            <div class="ms-2">
+                                                <li class="nav-item ">
+                                                    <a class="nav-link" href="/profile">
+                                                        <h6 class="mb-0">Nguyen Van A</h6>
+                                                    </a>
+                                                </li>
+                                                <small class="ms-2">Đăng xuất</small>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </ul>
                             </nav>
                         </div>
-                        <div class="user-box dropdown">
-                            <div class="d-flex align-items-center">
-                                <img src="../../assets/images/avatars/avatar-1.png" class="rounded-circle" width="30"
-                                    alt="">
-                                <div class="ms-2">
-                                    <h6 class="mb-0">Nguyen Van A</h6>
-                                    <small>Đăng xuất</small>
-                                </div>
-                            </div>
 
-                        </div>
                     </nav>
                 </div>
             </header>
@@ -76,12 +95,12 @@
         </div>
         <!--end page wrapper -->
         <!--start overlay-->
-        <div class="overlay toggle-icon" ></div>
+        <div class="overlay toggle-icon"></div>
         <!--end overlay-->
         <!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i
                 class='bx bxs-up-arrow-alt'></i></a>
         <!--End Back To Top Button-->
-        <footer class="page-footer"  >
+        <footer class="page-footer">
             <p class="mb-0">Copyright © 2021. All right reserved.</p>
         </footer>
     </div>
@@ -118,5 +137,4 @@ export default {
 @import "../../assets/css/header-colors.css";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css");
-
 </style>
