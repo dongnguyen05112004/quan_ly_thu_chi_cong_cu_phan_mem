@@ -46,6 +46,11 @@
                                             <div class="menu-title"><h6>Quản lý nợ</h6></div>
                                         </a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/dang-nhap">
+                                            <div class="menu-title"><h6>dang nhap</h6></div>
+                                        </a>
+                                    </li>
                                     
                                 </ul>
                             </nav>
