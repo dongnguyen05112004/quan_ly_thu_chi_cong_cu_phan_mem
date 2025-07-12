@@ -3,36 +3,24 @@
          <div class="row">
             <div class="col-lg-4">
                 <p>Ngày Bắt Đầu</p>
-                <div class="input-group">
-                    <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                        <option selected></option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </div>
+                <input type="date" class="form-control mt-2 mb-2">
             </div>
 
             <div class="col-lg-4">
                 <p>Ngày Kết Thúc</p>
-                <div class="input-group">
-                    <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                        <option selected></option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </div>
+                <input type="date" class="form-control mt-2 mb-2" v-model="day_begin">
             </div>
             <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-body">
+                <div class="card" >
+                    
+                    <div class="card-body" >
                         <h5>Ngân Sách</h5>
-                        <p class="mt-3">100,000 vnđ</p>
+                        <p class="mt-3">100000</p>
                     </div>
                 </div>
             </div>
         </div>
+        
         <div class="row">
             <div class="col-lg-9">
                 <div class="card">
@@ -543,7 +531,70 @@
 </template>
 <script>
 export default {
-    
+    name: 'BarChart',
+    components: { Bar },
+    data() {
+        return {
+            chartData: {
+                labels: [],
+                datasets: [{
+                    backgroundColor: '#FFDE59',
+                    data: []
+                }]
+            },
+            chartOptions: {
+                responsive: true
+            },
+            isloading: false,
+            tong_tien: '',
+            tong_tien_thu:{},
+            tong_tien_chi:{},
+            list_data: [],
+            day_begin: '',
+            day_end: '',
+        }
+
+
+    },
+
+
+    mounted() {
+        this.getdatachart();
+    },
+    methods: {
+
+        getdatachart() {
+
+            axios.get('http://127.0.0.1:8000/api/canhan/baocao')
+                .then((res) => {
+                    this.chartData.labels = res.data.danh_muc_thu_chi;
+                    this.chartData.datasets[0].data = res.data.list_tien_thu_chi;
+                    this.isloading = true;
+                })
+        },
+        hienThiTongThu() {
+            axios.get('http://127.0.0.1:8000/api/canhan/baocao')
+            .then((res) => {
+                    this.tong_tien = res.data.tong_tien_thu;
+                    
+
+                })
+           
+    },
+    hienThiTongChi() {
+            axios.get('http://127.0.0.1:8000/api/canhan/baocao')
+            .then((res) => {
+                    this.tong_tien = res.data.tong_tien_chi;
+                })
+           
+    },
+    chenhlech(){
+        axios.get('http://127.0.0.1:8000/api/canhan/baocao')
+            .then((res) => {
+                    this.tong_tien = res.data.chenh_lech;
+                })
+    }
+    },
 }
 </script>
 <style >
