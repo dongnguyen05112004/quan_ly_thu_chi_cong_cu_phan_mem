@@ -5,13 +5,13 @@
                 <div class="col-lg-3">
                     <div class="card ">
                         <div class="card-body text-center">
-                            <img src="https://i.pinimg.com/736x/a6/16/28/a6162845747ab6f081706e9a00552a13.jpg"
+                            <img v-bind:src="user.avatar"
                                 style="border-radius: 50%; width:100px ; height: 100px;" alt="user avatar">
-                            <h5 class="mt-3">Đông</h5>
+                            <h5 class="mt-3">{{user.ten_tai_khoan }}</h5>
                             <span class="text-start">
-                                <p>Email: </p>
-                                <p >Password:************ <i class="fa-solid fa-eye-slash"></i></p>
-                                <p>SĐT:</p>
+                                <p>Email : {{user.email }}</p>
+                                <p >Password:{{user.mat_khau }} <i class="fa-solid fa-eye-slash"></i></p>
+                                <p>SĐT:{{user.sdt }}</p>
                             </span>
                         </div>
                     </div>
@@ -43,28 +43,28 @@
                                                 <div class="row g-3">
                                                     <div class="col-md-6">
                                                         <label class="form-label">Họ và tên</label>
-                                                        <input  type="text" class="form-control"
+                                                        <input v-model="user.ten_tai_khoan"  type="text" class="form-control"
                                                             placeholder="Nhập họ và tên">
                                                     </div>
                                                     <div class="col-md-6">
                                                         <label class="form-label">Email</label>
-                                                        <input  type="email"
+                                                        <input v-model="user.email" type="email"
                                                             class="form-control" placeholder="example@email.com">
                                                     </div>
                                                     <div class="col-md-6">
                                                         <label class="form-label">Số điện thoại</label>
-                                                        <input  type="tel"
+                                                        <input v-model="user.sdt" type="tel"
                                                             class="form-control" placeholder="0123 456 789">
                                                     </div>
                                                     <div class="col-6">
                                                         <label class="form-label">Ảnh đại diện</label>
-                                                        <input  type="text" class="form-control"
+                                                        <input v-model="user.avatar" type="text" class="form-control"
                                                             placeholder="Nhập vào link">
                                                     </div>
                                                 </div>
                                                 <div class="text-end mt-4">
                                                     <button type="button" class="btn btn-light me-2">Huỷ</button>
-                                                    <button type="button" 
+                                                    <button v-on:click="updateProfile()" type="button" 
                                                         class="btn btn-primary px-4">Lưu thay
                                                         đổi</button>
                                                 </div>
@@ -83,18 +83,18 @@
 
                                             <div class="mb-3">
                                                 <label class="form-label fw-semibold">Mật khẩu hiện tại</label>
-                                                <input type="password" class="form-control" placeholder="Nhập mật khẩu hiện tại">
+                                                <input v-model="doipassword.old_mat_khau" type="password" class="form-control" placeholder="Nhập mật khẩu hiện tại">
                                             </div>
                                             <div class="mb-3">
                                                 <label class="form-label fw-semibold">Mật khẩu mới</label>
-                                                <input type="password" class="form-control" placeholder="Nhập mật khẩu mới">
+                                                <input v-model="doipassword.mat_khau" type="password" class="form-control" placeholder="Nhập mật khẩu mới">
                                             </div>
                                             <div class="mb-4">
                                                 <label class="form-label fw-semibold">Xác nhận mật khẩu
                                                     mới</label>
-                                                <input type="password" class="form-control" placeholder="Nhập lại mật khẩu mới">
+                                                <input v-model="doipassword.re_mat_khau" type="password" class="form-control" placeholder="Nhập lại mật khẩu mới">
                                             </div>
-                                            <button  type="submit"
+                                            <button v-on:click="updatePassword()" type="submit"
                                                 class="btn btn-primary px-4">Cập nhật mật
                                                 khẩu</button>
                                         </div>
@@ -111,8 +111,90 @@
     </div>
 </template>
 <script>
+import axios from 'axios'
 export default {
+    data() {
+        return {
+            user : {},
+            doipassword: {
+                old_mat_khau: '',
+                mat_khau: '',
+                re_mat_khau: ''
+            }
+        };
+    },
+    mounted() {
+        this.layThongTin();
+    },
+    methods: {
+        layThongTin() {
+            var token = localStorage.getItem("tai_khoan_login");
+            axios
+                .get("http://127.0.0.1:8000/api/khach-hang/get-data", {
+                    headers: {
+                        Authorization: "Bearer " + token,
+                    },
+                })
+                .then((res) => {
+                    if (res.data.status) {
+                        console.log(res.data.data);
 
+                        this.user = res.data.data;
+                    } else {
+                        toaster.error(res.data.message);
+                    }
+                });
+        },
+        updateProfile() {
+            axios
+                .post('http://127.0.0.1:8000/api/khach-hang/suaprofile', this.user, {
+                    headers: {
+                        Authorization: "Bearer " + localStorage.getItem("tai_khoan_login"),
+                    },
+                })
+                .then((res) => {
+                    if (res.data.status) {
+                        this.layThongTin();
+                        this.$toast.success(res.data.message);
+                    }
+                    else {
+                        this.$toast.error(res.data.message);
+                    }
+                })
+                .catch((res) => {
+                    const list = Object.values(res.response.data.errors);
+                    list.forEach((v, i) => {
+                        this.$toast.error(v[0]);
+                    });
+                })
+        },
+        updatePassword() {
+            axios
+                .post("http://127.0.0.1:8000/api/khach-hang/doipassword", this.doipassword, {
+                    headers: {
+                        Authorization: "Bearer " + localStorage.getItem("tai_khoan_login"),
+                    },
+                })
+                .then((res) => {
+                    if (res.data.status) {
+                        this.$toast.success(res.data.message);
+                        this.doipassword = {
+                            old_mat_khau: '',
+                            mat_khau: '',
+                            re_mat_khau: ''
+                        }
+                    } else {
+                        this.$toast.error(res.data.message);
+                    }
+                })
+                .catch((res) => {
+                    const list = Object.values(res.response.data.errors);
+                    list.forEach((v, i) => {
+                        this.$toast.error(v[0]);
+                    });
+                })
+        },
+    },
 }
 </script>
 <style>
