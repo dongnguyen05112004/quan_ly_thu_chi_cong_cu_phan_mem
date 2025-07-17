@@ -61,10 +61,7 @@
                         <input v-model="them_tietkiem.ma_tai_khoan" type="text" class="form-control" id="noId"
                             placeholder="Nhập tên nợ">
                     </div>
-                    <div class="mb-3">
-                        <label for="noName" class="form-label">Mã thành viên gia đình</label>
-                        <input v-model="them_tietkiem.ma_tvgd" type="text" class="form-control" id="noName" placeholder="">
-                    </div>
+                    
                     <div class="mb-3">
                         <label for="startDate" class="form-label">Ngày bắt đầu</label>
                         <input v-model="them_tietkiem.ngay_bat_dau" type="date" class="form-control" id="startDate">
@@ -120,10 +117,7 @@
                         <input v-model="sua_tietkiem.ma_tai_khoan" type="text" class="form-control" id="noId"
                             placeholder="Nhập tên nợ">
                     </div>
-                    <div class="mb-3">
-                        <label for="noName" class="form-label">Mã thành viên gia đình</label>
-                        <input v-model="sua_tietkiem.ma_tvgd" type="text" class="form-control" id="noName" placeholder="">
-                    </div>
+                    
                     <div class="mb-3">
                         <label for="startDate" class="form-label">Ngày bắt đầu</label>
                         <input v-model="sua_tietkiem.ngay_bat_dau" type="date" class="form-control" id="startDate">
@@ -153,9 +147,9 @@ export default {
     data() {
         return {
             l_tietkiem: [],
-            them_tietkiem: { ma_tiet_kiem: '',ma_tai_khoan: '',ma_tvgd: '',ngay_bat_dau: '',ngay_ket_thuc: '',lai_suat: '' },
-            xoa_tietkiem: { ma_tiet_kiem: '',ma_tai_khoan: '',ma_tvgd: '',ngay_bat_dau: '',ngay_ket_thuc: '',lai_suat: '' },
-            sua_tietkiem: { ma_tiet_kiem: '',ma_tai_khoan: '',ma_tvgd: '',ngay_bat_dau: '',ngay_ket_thuc: '',lai_suat: '' }
+            them_tietkiem: { ma_tiet_kiem: '',ma_tai_khoan: '',ngay_bat_dau: '',ngay_ket_thuc: '',lai_suat: '' },
+            xoa_tietkiem: { ma_tiet_kiem: '',ma_tai_khoan: '',ngay_bat_dau: '',ngay_ket_thuc: '',lai_suat: '' },
+            sua_tietkiem: { ma_tiet_kiem: '',ma_tai_khoan: '',ngay_bat_dau: '',ngay_ket_thuc: '',lai_suat: '' }
         }
     },
     methods: {
