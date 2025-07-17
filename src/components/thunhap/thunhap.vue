@@ -97,8 +97,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-                    <button v-on:click="xoaThu()" type="button" data-bs-dismiss="modal" class="btn btn-danger">Xac
-                        nhan</button>
+                    <button v-on:click="xoaThu()" type="button" data-bs-dismiss="modal" class="btn btn-danger">Xác nhận</button>
                 </div>
             </div>
         </div>
@@ -151,9 +150,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button v-on:click="suaThu()" type="button" data-bs-dismiss="modal" class="btn btn-danger">Xac
-                        nhan</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button v-on:click="suaThu()" type="button" data-bs-dismiss="modal" class="btn btn-danger">Xác nhận</button>
                 </div>
             </div>
         </div>
