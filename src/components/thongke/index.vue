@@ -40,12 +40,11 @@
                 <div class="card" style="background-color: #DDE8F5; border-radius: 20px;">
                     <div class="card-body">
                         <h5>Ngân Sách</h5>
-                        <p class="mt-3" >{{ chenh_lech }} VNĐ</p>
+                        <p class="mt-3">{{ chenh_lech }} VNĐ</p>
                     </div>
                 </div>
             </div>
         </div>
-
         <hr>
         <div class="row">
             <div class="col-lg-9">
@@ -528,44 +527,38 @@
                     </div>
                 </div>
 
-        
-        <div class="row">
-            <div class="col-lg-12">
-                <Bar
-                    v-if="isloading == true"
-                    id="my-chart-id"
-                    :options="chartOptions"
-                    :data="chartData"
-                />
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <Bar v-if="isloading == true" id="my-chart-id" :options="chartOptions" :data="chartData" />
+                    </div>
+                </div>
             </div>
-            
         </div>
         <div class="row">
             <div class="col-lg-5">
                 <div class="mb-3 mr-5">
-
-                <label for="exampleFormControlTextarea1" class="form-label"></label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" v-model="tong_tien"></textarea>
+                    <label for="exampleFormControlTextarea1" class="form-label"></label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        v-model="tong_tien"></textarea>
+                </div>
             </div>
-
-            </div>
-
         </div>
         <div class="row">
             <div class="row row-cols-auto g-3">
-
-				<div class="col-lg-4">
-				    <button type="button" class="btn btn-primary px-5" v-on:click="hienThiTongThu()">Tổng Thu</button>
-				</div>
-				<div class="col-lg-4">
-				    <button type="button" class="btn btn-danger px-5" v-on:click="hienThiTongChi()">Tổng Chi</button>
-				</div>
-				<div class="col-lg-4">
-					<button type="button" class="btn btn-success px-5" v-on:click="chenhlech()">Chênh Lệch</button>
-				</div>
-									
-									
-			</div>
+                <div class="col-lg-4">
+                    <button type="button" class="btn btn-primary px-5" v-on:click="hienThiTongThu()">Tổng
+                        Thu</button>
+                </div>
+                <div class="col-lg-4">
+                    <button type="button" class="btn btn-danger px-5" v-on:click="hienThiTongChi()">Tổng
+                        Chi</button>
+                </div>
+                <div class="col-lg-4">
+                    <button type="button" class="btn btn-success px-5" v-on:click="chenhlech()">Chênh
+                        Lệch</button>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -593,8 +586,8 @@ export default {
             },
             isloading: false,
             tong_tien: '',
-            tong_tien_thu:{},
-            tong_tien_chi:{},
+            tong_tien_thu: {},
+            tong_tien_chi: {},
             chenh_lech: '',
 
         }
@@ -620,26 +613,26 @@ export default {
         },
         hienThiTongThu() {
             axios.get('http://127.0.0.1:8000/api/canhan/baocao')
-            .then((res) => {
+                .then((res) => {
                     this.tong_tien = res.data.tong_tien_thu;
-                    
+
 
                 })
-           
-    },
-    hienThiTongChi() {
+
+        },
+        hienThiTongChi() {
             axios.get('http://127.0.0.1:8000/api/canhan/baocao')
-            .then((res) => {
+                .then((res) => {
                     this.tong_tien = res.data.tong_tien_chi;
                 })
-           
-    },
-    chenhlech(){
-        axios.get('http://127.0.0.1:8000/api/canhan/baocao')
-            .then((res) => {
+
+        },
+        chenhlech() {
+            axios.get('http://127.0.0.1:8000/api/canhan/baocao')
+                .then((res) => {
                     this.tong_tien = res.data.chenh_lech;
                 })
-    }
+        }
     },
 }
 </script>
