@@ -1,31 +1,43 @@
-<template >
+<template>
     <div>
-         <div class="row">
+        <div class="row">
             <div class="col-lg-4">
-                <p>Ngày Bắt Đầu</p>
-                <div class="input-group">
-                    <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                        <option selected></option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
+                <div class="card" style="background-color: #DDE8F5; border-radius: 20px;">
+                    <div class="card-body">
+                        <p>Ngày Bắt đầu</p>
+                        <div class="input-group">
+                            <select class="form-select" id="inputGroupSelect04"
+                                aria-label="Example select with button addon">
+                                <option selected></option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
+
             </div>
 
             <div class="col-lg-4">
-                <p>Ngày Kết Thúc</p>
-                <div class="input-group">
-                    <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                        <option selected></option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
+                <div class="card" style="background-color: #DDE8F5; border-radius: 20px;">
+                    <div class="card-body">
+                        <p>Ngày Kết Thúc</p>
+                        <div class="input-group">
+                            <select class="form-select" id="inputGroupSelect04"
+                                aria-label="Example select with button addon">
+                                <option selected></option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
+
             </div>
             <div class="col-lg-4">
-                <div class="card">
+                <div class="card" style="background-color: #DDE8F5; border-radius: 20px;">
                     <div class="card-body">
                         <h5>Ngân Sách</h5>
                         <p class="mt-3">100,000 vnđ</p>
@@ -33,9 +45,10 @@
                 </div>
             </div>
         </div>
+        <hr>
         <div class="row">
             <div class="col-lg-9">
-                <div class="card">
+                <div class="card" style=" border-radius: 20px;">
                     <div class="card-body" style="position: relative;">
                         <div id="chart1" style="min-height: 375px;">
                             <div id="apexchartsrar4pzr"
@@ -489,12 +502,12 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
             <div class="col-lg-3">
-                <div class="card">
+                <div class="card" style="background-color: #DDE8F5; border-radius: 20px;">
                     <div class="card-header">
                         <h5>Giao Dịch</h5>
                     </div>
@@ -518,34 +531,32 @@
         <div class="row">
             <div class="col-lg-5">
                 <div class="mb-3 mr-5">
-                <label for="exampleFormControlTextarea1" class="form-label"></label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <label for="exampleFormControlTextarea1" class="form-label"></label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
             </div>
-            </div>
-            
+
         </div>
         <div class="row">
             <div class="row row-cols-auto g-3">
-				<div class="col-lg-4">
-				    <button type="button" class="btn btn-primary px-5">Tổng Thu</button>
-				</div>
-				<div class="col-lg-4">
-				    <button type="button" class="btn btn-danger px-5">Tổng Chi</button>
-				</div>
-				<div class="col-lg-4">
-					<button type="button" class="btn btn-success px-5">Chênh Lệch</button>
-				</div>
-									
-									
-			</div>
+                <div class="col-lg-4">
+                    <button type="button" class="btn btn-primary px-5">Tổng Thu</button>
+                </div>
+                <div class="col-lg-4">
+                    <button type="button" class="btn btn-danger px-5">Tổng Chi</button>
+                </div>
+                <div class="col-lg-4">
+                    <button type="button" class="btn btn-success px-5">Chênh Lệch</button>
+                </div>
+
+
+            </div>
         </div>
     </div>
 </template>
 <script>
 export default {
-    
+
 }
 </script>
-<style >
-    
-</style>
+<style></style>

@@ -8,7 +8,7 @@
                     <p><strong>Tổng Chi tiêu:</strong> 19.9350.000đ</p>
                     <p class="highlight">Chi tiêu cao hơn tháng trước 1.850.000đ</p>
                 </div>
-                <div class="card" style="padding: 32px; box-shadow: none; background-color: #DDE8F5;">
+                <div class="card card-responsive"  style="padding: 32px;  background-color: #DDE8F5; height: 430px; overflow-y: auto;">
                 <div class="card-custom position-relative">
                     <div class="d-flex justify-content-between">
                         <div>

@@ -8,7 +8,7 @@
                     <p><strong>Tổng thu nhập:</strong> 19.9350.000đ</p>
                     <p class="highlight">Thu nhập cao hơn tháng trước 1.850.000đ</p>
                 </div>
-                <div class="card" style="padding: 32px; box-shadow: thune; background-color: #DDE8F5;">
+                <div class="card card-responsive"  style="padding: 32px;  background-color: #DDE8F5; height: 430px; overflow-y: auto;">
                     <template v-for="(v, index) in l_thu" :key="index">
                         <div class="card">
                             <div class="card-body">

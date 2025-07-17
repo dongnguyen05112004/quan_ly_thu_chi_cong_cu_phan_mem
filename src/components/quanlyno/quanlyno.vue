@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-6">
             <h5>Nợ cá nhân</h5>
-            <div class="card" style="background-color: #DDE8F5; border-radius: 20px;">
+            <div class="card card-responsive"  style="padding: 32px;  background-color: #DDE8F5; height: 600px; overflow-y: auto;">
                 <div class="card-body">
                     <template v-for="(v, index) in l_no" :key="index">
                         <div class="card" style="border-radius: 20px;">
