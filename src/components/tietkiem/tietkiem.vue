@@ -1,7 +1,7 @@
 <template >
     <div class="row">
         <div class="col-6">
-            <h5>Nợ cá nhân</h5>
+            <h5>Tiết kiệm cá nhân</h5>
             <div class="card" style="background-color: #DDE8F5; border-radius: 20px;">
                 <div class="card-body">
                     <template v-for="(v, index) in l_tietkiem" :key="index">
@@ -48,7 +48,7 @@
             </div>
         </div>
         <div class="col-6">
-            <h5>Thêm nợ cá nhân</h5>
+            <h5>Thêm tiết kiệm cá nhân</h5>
             <div class="card" style="background-color: #DDE8F5; border-radius: 20px;">
                 <div class="card-body">
                     <div class="mb-3">

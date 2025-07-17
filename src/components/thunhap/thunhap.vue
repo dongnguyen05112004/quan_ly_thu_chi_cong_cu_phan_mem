@@ -96,7 +96,7 @@
                     <p>Bạn có chắc muốn xóa khoản thu này không?</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
                     <button v-on:click="xoaThu()" type="button" data-bs-dismiss="modal" class="btn btn-danger">Xac
                         nhan</button>
                 </div>
@@ -108,7 +108,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel"> Sửa khoản nợ {{ sua_thu.ten_thu_nhap }}</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"> Sửa khoản thu nhập {{ sua_thu.ten_thu_nhap }}</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
