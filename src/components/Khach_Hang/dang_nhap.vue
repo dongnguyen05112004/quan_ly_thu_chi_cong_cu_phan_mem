@@ -45,7 +45,7 @@ export default {
             taikhoan: {
                 email : '',
                 mat_khau: '',
-            }
+            },
         }
     },
     methods:{
