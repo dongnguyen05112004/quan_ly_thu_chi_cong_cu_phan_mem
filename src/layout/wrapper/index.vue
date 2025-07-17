@@ -46,7 +46,6 @@
                                             </div>
                                         </a>
                                     </li>
-
                                     <li class="nav-item mt-2">
                                         <a class="nav-link" href="/no">
                                             <div class="menu-title">
@@ -54,7 +53,6 @@
                                             </div>
                                         </a>
                                     </li>
-
                                     <li class="nav-item mt-2">
                                         <a class="nav-link" href="/tietkiem">
                                             <div class="menu-title">
@@ -62,7 +60,6 @@
                                             </div>
                                         </a>
                                     </li>
-
                                     <div class="user-box dropdown">
                                         <div class="d-flex align-items-center">
                                             <img src="../../assets/images/avatars/avatar-1.png" class="rounded-circle"

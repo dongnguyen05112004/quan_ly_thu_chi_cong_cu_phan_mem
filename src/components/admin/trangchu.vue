@@ -48,7 +48,8 @@
                 </div>
             </div>
             <div class="col-lg-7" style="height: 100%;">
-                <div class="card" style="padding: 32px; box-shadow: none; background-color: #DDE8F5;">
+                <div class="card" style="padding: 32px; box-shadow: none; background-color: #DDE8F5; border-radius: 20px; height: 100%; overflow-y: auto;">
+                    
                     <div class="card-custom position-relative">
                         <div class="d-flex justify-content-between">
                             <div>
@@ -56,15 +57,7 @@
                                 <span class="text-small">Ngày: 5/2/2025</span><br>
                                 <span class="highlight">Nhiều hơn 2.000.000đ so với tháng trước</span>
                             </div>
-                            <div class="dropdown">
-                                <button class="btn btn-light btn-sm" type="button" data-bs-toggle="dropdown">
-                                    ...
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-custom">
-                                    <button>Chỉnh sửa thu thu nhập</button>
-                                    <button class="text-danger">Xóa thu nhập</button>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
 
@@ -75,15 +68,7 @@
                                 <span class="text-small">Ngày: 5/2/2025</span><br>
                                 <span class="highlight">Ít hơn 150.000đ so với tháng trước</span>
                             </div>
-                            <div class="dropdown">
-                                <button class="btn btn-light btn-sm" type="button" data-bs-toggle="dropdown">
-                                    ...
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-custom">
-                                    <button>Chỉnh sửa thu thu nhập</button>
-                                    <button class="text-danger">Xóa thu nhập</button>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
 
@@ -93,15 +78,7 @@
                                 <strong>Tiền trợ cấp:</strong> 2.000.000đ<br>
                                 <span class="text-small">Ngày: 5/2/2025</span>
                             </div>
-                            <div class="dropdown">
-                                <button class="btn btn-light btn-sm" type="button" data-bs-toggle="dropdown">
-                                    ...
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-custom">
-                                    <button>Chỉnh sửa thu thu nhập</button>
-                                    <button>Xóa thu nhập</button>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -113,7 +90,7 @@
                             <div class="col-6"><button class="btn" @click="goToThuChi" style="background-color: #fff; border-radius: 20px;">
                                     Quản lý thu chi cá nhân</button></div>
                             <div class="col-6"><button class="btn" @click="goToThuChi" style="background-color: #fff; border-radius: 20px;">
-                                    Quản lý thu chi cá nhân</button></div>
+                                    Quản lý thu chi Gia đình</button></div>
                         </div>
                     </div>
                 </div>
