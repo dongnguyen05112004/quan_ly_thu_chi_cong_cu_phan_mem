@@ -35,7 +35,7 @@
                                     <li class="nav-item mt-2">
                                         <a class="nav-link" href="/thongke">
                                             <div class="menu-title">
-                                                <h6>Thông kê</h6>
+                                                <h6>Thống kê</h6>
                                             </div>
                                         </a>
                                     </li>

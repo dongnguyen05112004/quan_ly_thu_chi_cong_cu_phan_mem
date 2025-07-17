@@ -23,13 +23,16 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="https://i.pinimg.com/736x/cf/14/09/cf140964e94c60c9bffa1314dfa8bc73.jpg" class="d-block w-100" alt="...">
+                            <img src="https://i.pinimg.com/736x/cf/14/09/cf140964e94c60c9bffa1314dfa8bc73.jpg"
+                                class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="https://i.pinimg.com/736x/de/d2/96/ded29651a74854788672e1d7f2b9a583.jpg" class="d-block w-100" alt="..." style="height: 700px;">
+                            <img src="https://i.pinimg.com/736x/de/d2/96/ded29651a74854788672e1d7f2b9a583.jpg"
+                                class="d-block w-100" alt="..." style="height: 700px;">
                         </div>
                         <div class="carousel-item">
-                            <img src="https://i.pinimg.com/736x/f0/93/10/f093108fd2975f9c0a0ebdce10c408bb.jpg" class="d-block w-100" alt="...">
+                            <img src="https://i.pinimg.com/736x/f0/93/10/f093108fd2975f9c0a0ebdce10c408bb.jpg"
+                                class="d-block w-100" alt="...">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -102,13 +105,29 @@
                         </div>
                     </div>
                 </div>
+                <br>
+                <div class="card"
+                    style="background-color: #DDE8F5; border-radius: 20px; box-shadow: none; padding: 32px;">
+                    <div class="card_body text-center">
+                        <div class="row">
+                            <div class="col-6"><button class="btn" @click="goToThuChi" style="background-color: #fff; border-radius: 20px;">
+                                    Quản lý thu chi cá nhân</button></div>
+                            <div class="col-6"><button class="btn" @click="goToThuChi" style="background-color: #fff; border-radius: 20px;">
+                                    Quản lý thu chi cá nhân</button></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </template>
 <script>
 export default {
-
+    methods: {
+        goToThuChi() {
+            this.$router.push('/thunhap'); // thay bằng path bạn cấu hình trong router
+        }
+    }
 }
 </script>
 <style>
